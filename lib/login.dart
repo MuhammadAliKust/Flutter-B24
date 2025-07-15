@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:string_validator/string_validator.dart';
 
 class LoginView extends StatelessWidget {
@@ -18,6 +19,9 @@ class LoginView extends StatelessWidget {
             enabled: true,
             keyboardType: TextInputType.emailAddress,
             maxLines: 1,
+            inputFormatters: [
+              LengthLimitingTextInputFormatter(11)
+            ],
             decoration: InputDecoration(
               label: Text("Email"),
               hintText: 'test@gmail.com',
