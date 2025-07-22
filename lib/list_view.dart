@@ -9,10 +9,10 @@ class ListViewDemo extends StatelessWidget {
       appBar: AppBar(title: Text("List View")),
       body: ListView.builder(
         itemCount: 10,
-        scrollDirection: Axis.vertical,
+        // scrollDirection: Axis.horizontal,
         itemBuilder: (context, i) {
           return Padding(
-            padding: const EdgeInsets.only(left: 50, right: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 18),
             child: Card(
               elevation: 10,
               color: Colors.blue,
