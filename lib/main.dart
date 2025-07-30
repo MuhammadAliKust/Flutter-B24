@@ -3,6 +3,7 @@ import 'package:flutter_b24/asset_image.dart';
 import 'package:flutter_b24/page_view.dart';
 import 'package:flutter_b24/single_selection.dart';
 
+import 'bottom_bar.dart';
 import 'dynamic_list_view.dart';
 import 'grid_view.dart';
 import 'list_view.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: GridViewDemo(),
+      home: BottomBarDemo(),
     );
   }
 
