@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_b24/asset_image.dart';
 import 'package:flutter_b24/page_view.dart';
 import 'package:flutter_b24/single_selection.dart';
+import 'package:flutter_b24/tabbar_view.dart';
 
 import 'bottom_bar.dart';
 import 'dynamic_list_view.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: BottomBarDemo(),
+      home: TabbarViewDemo(),
     );
   }
 
