@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_b24/asset_image.dart';
 import 'package:flutter_b24/date_picker.dart';
 import 'package:flutter_b24/dialog_box.dart';
+import 'package:flutter_b24/google_map.dart';
 import 'package:flutter_b24/page_view.dart';
 import 'package:flutter_b24/providers/user.dart';
 import 'package:flutter_b24/screen_a.dart';
@@ -34,6 +35,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: StackDemo());
+    return MaterialApp(home: GoogleMapDemo());
   }
 }
