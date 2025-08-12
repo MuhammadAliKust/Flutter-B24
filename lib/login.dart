@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_b24/providers/user.dart';
+import 'package:provider/provider.dart';
 import 'package:string_validator/string_validator.dart';
 
 class LoginView extends StatelessWidget {
@@ -10,6 +12,8 @@ class LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var userProvider = Provider.of<UserProvider>(context);
+
     return Scaffold(
       appBar: AppBar(title: Text("Login")),
       body: Column(
@@ -19,9 +23,7 @@ class LoginView extends StatelessWidget {
             enabled: true,
             keyboardType: TextInputType.emailAddress,
             maxLines: 1,
-            inputFormatters: [
-              LengthLimitingTextInputFormatter(11)
-            ],
+            inputFormatters: [LengthLimitingTextInputFormatter(11)],
             decoration: InputDecoration(
               label: Text("Email"),
               hintText: 'test@gmail.com',
@@ -99,6 +101,7 @@ class LoginView extends StatelessWidget {
                 );
                 return;
               }
+              userProvider.setEmail(emailController.text);
             },
             child: Text("Login"),
           ),
